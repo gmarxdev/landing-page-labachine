@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Labachine Dashboard/Features</title>
+
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Font Awesome (via CDN for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container mt-4">
+  <!--  WELCOME SECTION DINI PRE -->
+  <div class="alert alert-info text-center">
+    <h4>👋 Welcome back, Giel!</h4>
+    <p>You have 1 active order.</p>
+    <a href="#" class="btn btn-primary">📦 Book Laundry Pickup</a>
+  </div>
+
+  <!--  ORDER OVERVIEW CARDS -->
+  <div class="row text-center mb-4">
+    <!-- Repeat for each card -->
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <i class="fas fa-spinner fa-2x mb-2"></i>
+          <p class="mb-0">Active Orders</p>
+          <strong>1 In Progress</strong>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <i class="fas fa-calendar-alt fa-2x mb-2"></i>
+          <p class="mb-0">Orders This Month</p>
+          <strong>3 Completed</strong>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <i class="fas fa-gift fa-2x mb-2"></i>
+          <p class="mb-0">Loyalty Streak</p>
+          <strong>9 Orders</strong>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <i class="fas fa-wallet fa-2x mb-2"></i>
+          <p class="mb-0">GCash Linked</p>
+          <strong>Yes</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  BOOKING FORM DINI PRE -->
+  <div class="mb-4">
+    <h5>🧺 Quick Booking</h5>
+    <form id="bookingForm">
+      <div class="mb-3">
+        <label for="address" class="form-label">Address</label>
+        <input type="text" class="form-control" id="address" value="123 Sample Street" readonly />
+      </div>
+      <div class="mb-3">
+        <label for="type" class="form-label">Laundry Type</label>
+        <select class="form-select" id="type">
+          <option>Wash & Dry – ₱25/kg (Students)</option>
+          <option>Wash & Dry – ₱35/kg (Regular)</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="notes" class="form-label">Notes (Optional)</label>
+        <textarea class="form-control" id="notes" rows="2"></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">📅 Book for Pickup</button>
+    </form>
+  </div>
+
+  <!-- 🚚 ORDER TRACKING -->
+  <div class="mb-4">
+    <h5>🚚 Order Tracking</h5>
+    <ul class="list-group">
+      <li class="list-group-item">✅ Order Placed — Aug 6, 9:00 AM</li>
+      <li class="list-group-item">✅ Scheduled for Pickup — Aug 6, 9:15 AM</li>
+      <li class="list-group-item">✅ Picked Up by Juan — Aug 6, 10:00 AM</li>
+      <li class="list-group-item">🧼 In Laundry Process — Aug 6, 11:00 AM</li>
+      <li class="list-group-item">🚚 Out for Delivery — Aug 6, 4:00 PM</li>
+      <li class="list-group-item">🏁 Delivered — Aug 6, 5:30 PM</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ✅ SCRIPTS -->
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
